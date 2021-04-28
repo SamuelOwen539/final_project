@@ -2,7 +2,7 @@
 class MapQuest():
     def __init__(self):
         self.store_data = {}
-
+        self.yelp_data = []
     def call(self, loc):
         '''
         Receives a call requests accesses API
@@ -17,7 +17,11 @@ class MapQuest():
         -----
         None
         '''
-        self.store_data['key'] = 'value'
+        print(type(self.yelp_data))
+        restaurant_data = self.yelp_data[loc]
+        city = restaurant_data[0]
+        name = restaurant_data[1]
+        return city+name
 
 
 
